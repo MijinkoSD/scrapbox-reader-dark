@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,400i,500,500i,700,700i');
+
+.page {
+  font-size: 15px;
+  line-height: 28px;
+  font-family: 'Roboto', Helvetica, Arial, 'Hiragino Sans', sans-serif;
+  background-color: #fefefe;
+}
+
+code {
+  font-family: Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+a {
+  color: #5e8af7;
+}
+a:active,
+a:hover,
+a:focus {
+  color: #1555f3;
+}
+
+// page body
+.line {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  
+  a.page-link {
+    text-decoration: none;
+  }
+  
+  &.line-title {
+    font-size: 1.73em;
+    line-height: 42px;
+    color: #000;
+    padding-bottom: 21px;
+  }
+  
+  // icon
+  img.icon {
+    height: 1.3em;
+    vertical-align: top;
+  }
+  img.strong-icon {
+    height: 3.9em;
+    vertical-align: bottom;
+  }
+
+  // block quote
+  .quote {
+    margin: 0;
+    font-style: italic;
+    background-color: rgba(128, 128, 128, 0.1);
+    display: block;
+    border-left: solid 4px #a0a0a0;
+    padding-left: 4px;
+     > .tag {
+      visibility: hidden;
+    }
+  }
+
+  // code blocks
+  code {
+    padding: 0;
+    font-size: 90%;
+    color: #342d9c;
+    background-color: rgba(0, 0, 0, 0.04);
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    border-radius: 4px;
+  }
+  .code-block {
+    display: block;
+    line-height: 2em;
+    background-color: rgba(0, 0, 0, 0.04);
+    .code-block-start {
+      font-size: 0.9em;
+      background-color: #ffcfc6;
+      padding: 1px 2px;
+    }
+  }
+
+  // helpfeel notation
+  code.helpfeel {
+    background-color: #fbebdd;
+    padding: 3px !important;
+    .prefix {
+      color: #f17c00;
+    }
+    .entry {
+      color: #cc5020;
+    }
+  }
+  
+  // code notation
+  code.cli .prefix {
+    color: #9c6248;
+  }
+
+  // code blocks
+  code.code-block .code-block-start a,
+  .table-block .table-block-start a {
+    color: #342d9c;
+    text-decoration: underline;
+  }
+
+  // image notation
+  a.link .image {
+    padding-bottom: 3px;
+    border-style: none none solid;
+    border-width: 1.5px;
+    border-color: #8fadf9;
+  }
+
+  // mathematical notation
+  .formula {
+    margin: auto 6px;
+  }
+}
+
+// tables
+.table-block {
+  table {
+    border-collapse: collapse;
+  }
+  .table-block-start {
+    padding: 1px 2px;
+    font-size: 0.9em;
+    background-color: #ffcfc6;
+  }
+  .cell {
+    margin: 0;
+    padding: 0 8px;
+    box-sizing: content-box;
+    white-space: pre;
+  }
+  .cell:nth-child(odd) {
+    background-color: rgba(0, 0, 0, 0.04);
+  }
+  .cell:nth-child(even) {
+    background-color: rgba(0, 0, 0, 0.06);
+  }
+}
+
+// brackets
+.deco {
+  .deco-\*-1 {
+    font-weight: bold;
+  }
+  .deco-\*-2 {
+    font-weight: bold;
+    font-size: 1.2em;
+    line-height: 28px;
+  }
+  .deco-\*-3 {
+    font-weight: bold;
+    font-size: 1.44em;
+    line-height: 35px;
+  }
+  .deco-\*-4 {
+    font-weight: bold;
+    font-size: 1.73em;
+    line-height: 42px;
+  }
+  .deco-\*-5 {
+    font-weight: bold;
+    font-size: 2.07em;
+    line-height: 49px;
+  }
+  .deco-\*-6 {
+    font-weight: bold;
+    font-size: 2.49em;
+    line-height: 56px;
+  }
+  .deco-\*-7 {
+    font-weight: bold;
+    font-size: 3em;
+    line-height: 63px;
+  }
+  .deco-\*-8 {
+    font-weight: bold;
+    font-size: 3.58em;
+    line-height: 77px;
+  }
+  .deco-\*-9 {
+    font-weight: bold;
+    font-size: 4.3em;
+    line-height: 91px;
+  }
+  .deco-\*-10 {
+    font-weight: bold;
+    font-size: 5.16em;
+    line-height: 105px;
+  }
+
+  .deco-\/ {
+    font-style: italic;
+  }
+  .deco-- {
+    text-decoration: line-through;
+  }
+  .deco-_ {
+    text-decoration: underline;
+  }
+}
