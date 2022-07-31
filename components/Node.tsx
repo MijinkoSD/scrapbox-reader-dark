@@ -113,15 +113,24 @@ const Formula = (props: FormulaNodeType) => (
   <span className="formula">{props.formula}</span>
 )
 
-const Decoration = (props: DecorationNodeType) => (
-  <span className="deco">
-    <span className={props.decos.map(deco => `deco-${deco}`).join(' ')}>
-      {props.nodes.map(node => (
-        <Node {...node} />
-      ))}
+const Decoration = (props: DecorationNodeType) => {
+  const decos: string[] = props.decos.map(deco => {
+    if (deco.indexOf("*-") == 0) {
+      return `deco-* deco-${deco}`
+    } else {
+      return `deco-${deco}`
+    }
+  });
+  return (
+    <span className="deco">
+      <span className={decos.join(' ')}>
+        {props.nodes.map(node => (
+          <Node {...node} />
+        ))}
+      </span>
     </span>
-  </span>
-)
+  )
+}
 
 const Code = (props: CodeNodeType) => (
   <code className="code">
