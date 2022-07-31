@@ -1,9 +1,28 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto:400,400i,500,500i,700,700i");
+body {
+  --body-bg: #202228;
+  --page-text-color: rgba(255, 255, 255, 0.87);
+  --page-link-color: #80c9fe;
+  --page-link-hover-color: #6a9ec6;
+  --page-bg: #373b44;
+  --line-title-color: var(--page-text-color);
+  --code-color: #ccc;
+  --code-bg: rgba(0, 0, 0, 0.18);
+  --code-prefix: #9c6248;
+}
+
+body {
+  background-color: var(--body-bg);
+  color: var(--page-text-color);
+  margin: 8px 0;
+}
+
 .page {
   font-size: 15px;
   line-height: 28px;
   font-family: 'Roboto', Helvetica, Arial, 'Hiragino Sans', sans-serif;
-  background-color: #fefefe;
+  background-color: var(--page-bg);
+  padding: 0 8px;
 }
 
 code {
@@ -11,13 +30,13 @@ code {
 }
 
 a {
-  color: #5e8af7;
+  color: var(--page-link-color);
 }
 
 a:active,
 a:hover,
 a:focus {
-  color: #1555f3;
+  color: var(--page-link-hover-color);
 }
 
 .line {
@@ -32,7 +51,7 @@ a:focus {
 .line.line-title {
   font-size: 1.73em;
   line-height: 42px;
-  color: #000;
+  color: var(--line-title-color);
   padding-bottom: 21px;
 }
 
@@ -62,8 +81,8 @@ a:focus {
 .line code {
   padding: 0;
   font-size: 90%;
-  color: #342d9c;
-  background-color: rgba(0, 0, 0, 0.04);
+  color: var(--code-color);
+  background-color: var(--code-bg);
   white-space: pre-wrap;
   word-wrap: break-word;
   border-radius: 4px;
@@ -72,7 +91,7 @@ a:focus {
 .line .code-block {
   display: block;
   line-height: 2em;
-  background-color: rgba(0, 0, 0, 0.04);
+  background-color: var(--code-bg);
 }
 
 .line .code-block .code-block-start {
@@ -95,7 +114,7 @@ a:focus {
 }
 
 .line code.cli .prefix {
-  color: #9c6248;
+  color: var(--code-prefix);
 }
 
 .line code.code-block .code-block-start a,
