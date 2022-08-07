@@ -28,11 +28,15 @@ const BlockBase = (props: { indent: number; children: React.ReactNode }) => (
   </div>
 )
 
-const Title = (props: TitleType) => (
-  <div className="line line-title">
-    <span>{props.text}</span>
-  </div>
-)
+const Title = (props: TitleType) => {
+  const { project, page } = useRouter().query
+  const path = `https://scrapbox.io/${project}/${page}`
+  return (
+    <div className="line line-title">
+      <a href={path}>{props.text}</a>
+    </div>
+  )
+}
 
 const CodeBlock = (props: CodeBlockType) => {
   const { project, page } = useRouter().query

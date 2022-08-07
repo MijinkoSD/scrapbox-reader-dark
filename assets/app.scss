@@ -52,8 +52,10 @@ a:focus {
   &.line-title {
     font-size: 1.73em;
     line-height: 42px;
-    color: var(--line-title-color);
     padding-bottom: 21px;
+    a {
+      color: var(--line-title-color);
+    }
   }
   
   // icon
