@@ -148,6 +148,9 @@ a:focus {
     font-size: 0.9em;
     background-color: #ffcfc6;
   }
+  .table-block-body {
+    overflow: scroll;
+  }
   .cell {
     margin: 0;
     padding: 0 8px;

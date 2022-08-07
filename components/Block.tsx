@@ -64,19 +64,21 @@ const Table = (props: TableType) => {
         <span className="table-block-start">
           <a href={path}>{props.fileName}</a>
         </span>
-        <table>
-          {props.cells.map(rows => (
-            <tr>
-              {rows.map(columns => (
-                <td className="cell">
-                  {columns.map(node => (
-                    <Node {...node} />
-                  ))}
-                </td>
-              ))}
-            </tr>
-          ))}
-        </table>
+        <div className="table-block-body">
+          <table>
+            {props.cells.map(rows => (
+              <tr>
+                {rows.map(columns => (
+                  <td className="cell">
+                    {columns.map(node => (
+                      <Node {...node} />
+                    ))}
+                  </td>
+                ))}
+              </tr>
+            ))}
+          </table>
+        </div>
       </div>
     </BlockBase>
   )
