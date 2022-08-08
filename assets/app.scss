@@ -20,11 +20,13 @@ body {
 }
 
 .page {
+  margin: 0 auto;
+  padding: 0 8px;
+  max-width: 862px;
   font-size: 15px;
   line-height: 28px;
   font-family: 'Roboto', Helvetica, Arial, 'Hiragino Sans', "Font Awesome 5 Free", "Font Awesome 5 Brands", sans-serif;
   background-color: var(--page-bg);
-  padding: 0 8px;
 }
 
 code {
